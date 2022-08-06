@@ -1,6 +1,6 @@
-import { ICountry, ICountryList } from "../types";
+import { ICountry } from "../types";
 
-export const transformCountries = (countries: ICountryList[]): ICountry[] => {
+export const transformCountries = (countries: any[]): ICountry[] => {
   return countries.map((country) => {
     return {
       flag: country.flags.svg,
