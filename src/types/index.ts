@@ -9,7 +9,26 @@ export interface ICountry {
   population: number;
 }
 
-type FType = keyof typeof countries;
+// export interface ICountryList {
+//   flags: {
+//     png: string;
+//     svg: string;
+//   };
+//   name: {
+//     common: string;
+//     official: string;
+//     nativeName: {
+//       [key: string]: {
+//         official: string;
+//         common: string;
+//       };
+//     };
+//   };
+//   capital: string[];
+//   region: string;
+//   area: number;
+//   population: number;
+// }
 
 export type BadgeLabel = "area" | "population";
 
