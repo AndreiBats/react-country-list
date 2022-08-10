@@ -18,7 +18,7 @@ interface ILanguage {
 }
 
 interface INative {
-  [key: string]: ILanguage;
+  [key: string]: ILanguage | undefined;
 }
 
 interface IName {
