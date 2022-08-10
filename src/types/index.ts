@@ -1,5 +1,3 @@
-import countries from "../country-data.json";
-
 export interface ICountry {
   flag: string;
   name: string;
@@ -9,26 +7,34 @@ export interface ICountry {
   population: number;
 }
 
-// export interface ICountryList {
-//   flags: {
-//     png: string;
-//     svg: string;
-//   };
-//   name: {
-//     common: string;
-//     official: string;
-//     nativeName: {
-//       [key: string]: {
-//         official: string;
-//         common: string;
-//       };
-//     };
-//   };
-//   capital: string[];
-//   region: string;
-//   area: number;
-//   population: number;
-// }
+interface IFlag {
+  png: string;
+  svg: string;
+}
+
+interface ILanguage {
+  official: string;
+  common: string;
+}
+
+interface INative {
+  [key: string]: ILanguage;
+}
+
+interface IName {
+  common: string;
+  official: string;
+  nativeName: INative;
+}
+
+export interface ICountryList {
+  flags: IFlag;
+  name: IName;
+  capital: string[];
+  region: string;
+  area: number;
+  population: number;
+}
 
 export type BadgeLabel = "area" | "population";
 
